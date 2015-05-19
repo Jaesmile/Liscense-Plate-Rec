@@ -1,0 +1,474 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Server.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Server.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Server"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Server 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2015",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_SERVER_DIALOG DIALOGEX 0, 0, 267, 185
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Server"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,104,98,88,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,104,125,88,19,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "登陆",IDC_BUTTON_LOGIN,73,156,49,17
+    RTEXT           "用户名",IDC_STATIC,37,103,61,14
+    RTEXT           "密  码",IDC_STATIC,38,131,61,14
+    PUSHBUTTON      "注册",IDC_BUTTON_REGISTER,145,156,49,17
+    CONTROL         142,IDC_STATIC,"Static",SS_BITMAP,7,7,253,80
+END
+
+IDD_REGISTER_DIALOG DIALOG DISCARDABLE  0, 0, 152, 99
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "注册"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT1,70,14,55,13,ES_AUTOHSCROLL
+    RTEXT           "用 户 名",IDC_STATIC,19,17,42,11
+    RTEXT           "确认密码",IDC_STATIC,28,55,33,11
+    RTEXT           "密    码",IDC_STATIC,23,36,38,11
+    EDITTEXT        IDC_EDIT2,70,34,55,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,70,53,55,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "注册",IDC_BUTTON_CONFIRM_REGISTER,54,73,45,12
+END
+
+IDD_MAIN_DIALOG DIALOG DISCARDABLE  0, 0, 313, 213
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "车牌识别"
+FONT 10, "System"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB,"SysTabControl32",0x0,7,10,229,158
+    CONTROL         "List1",IDC_IMAGE_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,240,21,66,147
+    LTEXT           "端口号",IDC_STATIC,9,179,29,8
+    EDITTEXT        IDC_PORT_EDIT,8,193,39,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "启动服务",IDC_SERVESTART_BUTTON,51,175,41,12
+    PUSHBUTTON      "停止服务",IDC_STOPSERVE_BUTTON,51,193,41,12
+    EDITTEXT        IDC_STATE_EDIT,97,174,139,31,ES_MULTILINE | WS_VSCROLL
+END
+
+IDD_RECOGNITION_TAB DIALOG DISCARDABLE  0, 0, 275, 193
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "识别",IDC_BUTTON_RECOGNITION,164,13,47,14
+    PUSHBUTTON      "一键识别",IDC_BUTTON_KEYRECOGNITION,164,45,47,12
+    EDITTEXT        IDC_EDIT1,161,92,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,161,120,53,14,ES_AUTOHSCROLL
+    LTEXT           "违章车牌",IDC_STATIC,161,81,53,9
+    LTEXT           "违章时间",IDC_STATIC,161,109,53,9
+    GROUPBOX        "一键识别",IDC_STATIC,155,32,66,109
+    CONTROL         "",IDC_PICTURE,"Static",SS_BITMAP | SS_CENTERIMAGE,5,8,
+                    146,138
+    PUSHBUTTON      "保存",IDC_BUTTON_SAVE,164,61,47,12
+END
+
+IDD_SEARCH_TAB DIALOG DISCARDABLE  0, 0, 276, 195
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "按姓名查询",IDC_BUTTON_SEARCH_BY_NAME,172,111,50,15
+    PUSHBUTTON      "按身份证查询",IDC_BUTTON_SEARCH_BY_ID,172,86,50,15
+    DEFPUSHBUTTON   "按车牌号识别",IDC_BUTTON_SEARACH_BY_LPN,172,61,50,15
+    EDITTEXT        IDC_EDIT_SEARCH_KEY,172,38,50,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "输入关键字",IDC_STATIC,179,25,50,9
+    CONTROL         "List1",IDC_SEARCH_LIST,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,9,8,157,132
+END
+
+IDD_SETTING_TAB DIALOG DISCARDABLE  0, 0, 324, 193
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    GROUPBOX        "待注册用户",IDC_STATIC,10,6,139,134
+    CONTROL         "List1",IDC_REGISTER_LIST,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,19,19,120,97
+    PUSHBUTTON      "批准",IDC_BUTTON_APPROVE,28,122,42,13
+    PUSHBUTTON      "拒绝",IDC_BUTTON_REFUSE,86,122,42,13
+    GROUPBOX        "用户信息",IDC_STATIC,159,24,62,83
+    EDITTEXT        IDC_EDIT_CURRENT_USERNAME,165,38,49,16,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "修改用户名",IDC_BUTTON_CHANGE_USERNAME,167,64,45,15
+    PUSHBUTTON      "修改密码",IDC_BUTTON_CHANGE_PASSWARD,167,84,45,15
+    PUSHBUTTON      "帮助",IDC_BUTTON_HELP,167,114,45,15
+END
+
+IDD_MODIFYNAME_DIALOG DIALOG DISCARDABLE  0, 0, 139, 74
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "修改用户名"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT_NEWNAME,56,19,61,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确认",IDC_BUTTON_MODIFY,23,43,38,12
+    LTEXT           "新用户名",IDC_STATIC,20,21,33,8
+    PUSHBUTTON      "取消",IDC_CANCEL,76,43,38,12
+END
+
+IDD_MODIFYPASSWD_DIALOG DIALOG DISCARDABLE  0, 0, 160, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "修改密码"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确认修改",IDC_MODIFYPASSWD_BUTTON,32,79,41,12
+    RTEXT           "新  密  码",IDC_STATIC,30,38,37,8
+    RTEXT           "确认密码",IDC_STATIC,33,57,34,8
+    RTEXT           "旧  密  码",IDC_STATIC,31,18,36,8
+    EDITTEXT        IDC_EDIT_OLDPW,73,16,55,13,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NEWPW,73,35,55,13,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CONFIRMPW,73,54,55,13,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "取消",IDC_CANCEL,87,79,41,12
+END
+
+IDD_RECOGNITION_DIALOG DIALOG DISCARDABLE  0, 0, 275, 169
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 10, "System"
+BEGIN
+    CONTROL         "",IDC_STATIC_SrcImg,"Static",SS_BLACKFRAME,7,13,112,110
+    CONTROL         "",IDC_STATIC_CarPlateImg,"Static",SS_BLACKFRAME,123,7,
+                    94,25
+    CONTROL         "",IDC_PIC_9,"Static",SS_BLACKFRAME,123,36,94,25
+    EDITTEXT        IDC_EDIT1,172,65,45,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,172,87,45,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,172,109,45,16,ES_AUTOHSCROLL
+    LTEXT           "违章车牌",IDC_STATIC,134,69,35,11
+    LTEXT           "违章时间",IDC_STATIC,134,91,35,11
+    LTEXT           "匹配率",IDC_STATIC,134,113,30,11
+    PUSHBUTTON      "提取",IDC_BUTTON_LOCATE,230,14,31,13
+    PUSHBUTTON      "灰度图",IDC_BUTTON_DOGRAY,230,35,31,13
+    PUSHBUTTON      "二值图",IDC_BUTTON_INARYZ,230,56,31,13
+    PUSHBUTTON      "去噪",IDC_BUTTON_ENOIS,230,77,31,13
+    PUSHBUTTON      "切割",IDC_BUTTON_SEG,230,98,31,13
+    PUSHBUTTON      "识别",IDC_BUTTON_RECOG,230,119,31,13
+    PUSHBUTTON      "保存",IDC_BUTTON_SAVE,230,140,31,13
+    CONTROL         "",IDC_PIC_1,"Static",SS_BLACKFRAME,7,132,17,25
+    CONTROL         "",IDC_PIC_2,"Static",SS_BLACKFRAME,39,132,17,25
+    CONTROL         "",IDC_PIC_3,"Static",SS_BLACKFRAME,71,132,17,25
+    CONTROL         "",IDC_PIC_4,"Static",SS_BLACKFRAME,103,132,17,25
+    CONTROL         "",IDC_PIC_5,"Static",SS_BLACKFRAME,135,132,17,25
+    CONTROL         "",IDC_PIC_6,"Static",SS_BLACKFRAME,167,132,17,25
+    CONTROL         "",IDC_PIC_7,"Static",SS_BLACKFRAME,199,132,17,25
+END
+
+IDD_DEL_DIALOG DIALOG DISCARDABLE  0, 0, 150, 73
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "删除"
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,81,39,50,14
+    DEFPUSHBUTTON   "确定",IDC_BUTTON_CONFIRM_DEL,20,39,50,14
+    LTEXT           "是否删除该条违章记录？",IDC_STATIC,34,22,101,14
+END
+
+IDD_DEL_PICTURE_DIALOG DIALOG DISCARDABLE  0, 0, 152, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 10, "System"
+BEGIN
+    CTEXT           "是否删除该图片?",IDC_STATIC,30,21,93,12
+    PUSHBUTTON      "确认",IDC_BUTTON1,28,39,42,14
+    PUSHBUTTON      "取消",IDC_BUTTON2,83,39,42,14
+END
+
+IDD_HELP_DIALOG DIALOG DISCARDABLE  0, 0, 169, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 10, "System"
+BEGIN
+    CONTROL         144,IDC_STATIC,"Static",SS_BITMAP,15,14,45,45
+    LTEXT           "车牌定位识别系统(VLPR)",IDC_STATIC,64,18,87,8
+    LTEXT           "版权所有 (C) 2015",IDC_STATIC,64,29,90,13
+    LTEXT           "Group4",IDC_STATIC,126,43,28,13
+    PUSHBUTTON      "确定",IDC_OK,62,61,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Server Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Server\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2015\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Server.EXE\0"
+            VALUE "ProductName", "Server 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SERVER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_REGISTER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+
+    IDD_MAIN_DIALOG, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+    END
+
+    IDD_RECOGNITION_TAB, DIALOG
+    BEGIN
+        RIGHTMARGIN, 274
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_SEARCH_TAB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+
+    IDD_SETTING_TAB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_MODIFYNAME_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 131
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_MODIFYPASSWD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 153
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_RECOGNITION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_DEL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_DEL_PICTURE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+
+    IDD_HELP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 162
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR  DISCARDABLE     "res\\cursor1.cur"
+IDC_CURSOR2             CURSOR  DISCARDABLE     "res\\cursor2.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_BKHEAD       BITMAP  DISCARDABLE     "res\\on.bmp"
+IDB_BITMAP_LOGO         BITMAP  DISCARDABLE     "res\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Server(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Server.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
