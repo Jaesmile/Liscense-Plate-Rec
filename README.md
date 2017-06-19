@@ -1,2 +1,2 @@
-# Liscense-Plate-Rec
+# License-Plate-Rec
 实训项目 车牌识别
